@@ -5,6 +5,8 @@
 	src: url('../font/myfont-ultra-light.otf');
 }
 
+/* ANIMAÇÃO */
+
 /* VARIÁVEIS */
 :root {
 	--theme-color: #28f5be;
@@ -287,6 +289,7 @@ button {
 	}
 
 	.wrapper-display .robot {
+		margin-top: 80px;
 		width: 200px;
 	}
 
@@ -351,6 +354,7 @@ button {
 	}
 
 	.wrapper-display .robot {
+		margin-top: 0;
 		width: 250px;
 	}
 
@@ -374,9 +378,6 @@ button {
 
 @media (min-width: 991px) {
 	/* HOME */
-	.wrapper-display .robot {
-		width: 300px;
-	}
 
 	.wrapper-title h1 {
 		font-size: 60px;
