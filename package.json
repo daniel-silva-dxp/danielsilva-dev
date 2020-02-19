@@ -1,0 +1,32 @@
+{
+  "name": "danielsilva-frontend",
+  "version": "1.0.0",
+  "description": "Sou um desenvolvedor front-end com uma mentalidade centrada no usuário e uma sensibilidade ao design para resultar no ajuste perfeito.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel-Silva/danielsilva-dev.git"
+  },
+  "keywords": [
+    "daniel",
+    "silva",
+    "dev",
+    "developer",
+    "desenvolvedor",
+    "fron-end",
+    "frontend",
+    "js",
+    "html5",
+    "css",
+    "portfólio"
+  ],
+  "author": "Daniel Silva <dani3l.dxp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daniel-Silva/danielsilva-dev/issues"
+  },
+  "homepage": "https://github.com/Daniel-Silva/danielsilva-dev#readme"
+}
