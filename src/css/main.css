@@ -27,22 +27,18 @@
 	text-rendering: optimizeLegibility;
 	vertical-align: baseline;
 }
-
 html,
 body {
 	background: var(--primary-color-0);
-	overflow-x: hidden;
 }
-
 body {
 	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
 }
-
 ol,
 ul {
 	list-style: none;
 }
-
 h1,
 h2,
 h3,
@@ -51,34 +47,28 @@ h5,
 h6 {
 	font-weight: inherit;
 }
-
 span {
 	display: inline-block;
 }
-
 a {
 	text-decoration: none;
 	color: inherit;
 }
-
 p {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
 	font-size: 14px;
 }
-
 img {
 	display: block;
 	max-width: 100%;
 }
-
 input,
 button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
-
 button {
 	outline: 0;
 	border: none;
@@ -95,23 +85,77 @@ button {
 	margin-right: auto;
 	margin-left: auto;
 }
-
+.logo {
+	display: block;
+	font-family: 'La Belle Aurore', cursive;
+	font-size: 24px;
+	padding-top: 3px;
+}
+.logo::before,
+.logo::after {
+	color: var(--theme-color);
+}
+.logo::before {
+	content: '<';
+}
+.logo::after {
+	content: '/>';
+}
 .tags {
 	color: var(--primary-color-2);
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	left: 20px;
 	font-size: 18px;
 	font-family: 'La Belle Aurore', cursive;
+	z-index: 500;
 }
-
 .top-tags {
 	bottom: auto;
 	top: 100px;
 }
-
 .bottom-tags {
 	bottom: 20px;
+}
+.title {
+	position: relative;
+	display: block;
+	margin-top: 140px;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.title h1 {
+	font-size: 14px;
+	font-family: MyFont;
+}
+.title h1 > span {
+	display: block;
+	font-size: 70px;
+	line-height: 70px;
+	margin-left: -5px;
+	letter-spacing: -.1em;
+}
+.markup {
+	background: var(--theme-color);
+	color: var(--primary-color-0);
+	display: table;
+	margin-top: 40px;
+	font-size: 64px;
+	font-weight: 400;
+	line-height: 55px;
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+
+/* FORMATAÇÃO GERAL */
+.home,
+.about {
+	height: 100vh;
+	position: relative;
 }
 
 /* SCROLLBAR */
@@ -145,7 +189,6 @@ button {
 		right: 0;
 		z-index: 500;
 	}
-
 	.topbar > .container {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -154,27 +197,6 @@ button {
 		align-items: center;
 		justify-content: space-between;
 	}
-
-	.logo {
-		display: block;
-		font-family: 'La Belle Aurore', cursive;
-		font-size: 24px;
-		padding-top: 3px;
-	}
-
-	.logo::before,
-	.logo::after {
-		color: var(--theme-color);
-	}
-
-	.logo::before {
-		content: '<';
-	}
-
-	.logo::after {
-		content: '/>';
-	}
-
 	span.icon-menu {
 		display: block;
 		width: 2em;
@@ -265,11 +287,6 @@ button {
 	}
 
 	/* HOME */
-	.home {
-		height: 100vh;
-		position: relative;
-	}
-
 	.wrapper-display {
 		position: relative;
 		max-width: 1640px;
@@ -287,16 +304,13 @@ button {
 		align-items: center;
 		justify-content: space-evenly;
 	}
-
 	.wrapper-display .robot {
 		margin-top: 80px;
 		width: 200px;
 	}
-
 	.wrapper-title {
 		flex-basis: 50%;
 	}
-
 	.wrapper-title h1 {
 		display: block;
 		font-size: 32px;
@@ -304,7 +318,6 @@ button {
 		padding: 10px 0;
 		position: relative;
 	}
-
 	.wrapper-title h1::before,
 	.wrapper-title h1::after {
 		font-family: 'La Belle Aurore', cursive;
@@ -312,12 +325,10 @@ button {
 		color: var(--primary-color-2);
 		position: absolute;
 	}
-
 	.wrapper-title h1::before {
 		content: '<h1>';
 		top: -40px;
 	}
-
 	.wrapper-title h1::after {
 		content: '</h1>';
 		bottom: 0;
@@ -327,7 +338,6 @@ button {
 		color: var(--primary-color-2);
 		font-size: 12px;
 	}
-
 	.scroll {
 		width: 10px;
 		position: absolute;
@@ -335,6 +345,17 @@ button {
 		right: 0;
 		bottom: 0;
 		margin: 0 auto;
+	}
+
+	/* QUEM SOU */
+	.text p {
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 20px;
+	}
+	.markup {
+		font-size: 40px;
+		line-height: 40px;
 	}
 }
 
@@ -348,25 +369,20 @@ button {
 		-ms-flex-direction: row;
 		flex-direction: row;
 	}
-
 	.wrapper-title {
 		flex-basis: auto;
 	}
-
 	.wrapper-display .robot {
 		margin-top: 0;
 		width: 250px;
 	}
-
 	.wrapper-title h1 {
 		font-size: 36px;
 		line-height: 36px;
 	}
-
 	.wrapper-title h1::after {
 		bottom: 0;
 	}
-
 	.wrapper-title p {
 		font-size: 14px;
 	}
@@ -378,12 +394,10 @@ button {
 
 @media (min-width: 991px) {
 	/* HOME */
-
 	.wrapper-title h1 {
 		font-size: 60px;
 		line-height: 60px;
 	}
-
 	.wrapper-title h1::after {
 		bottom: -10px;
 	}
