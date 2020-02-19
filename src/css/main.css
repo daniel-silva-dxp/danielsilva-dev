@@ -5,7 +5,7 @@
 	src: url('../font/myfont-ultra-light.otf');
 }
 
-/* VARIABLES */
+/* VARIÁVEIS */
 :root {
 	--theme-color: #28f5be;
 	--primary-color-0: #1e1e1e;
@@ -62,6 +62,7 @@ a {
 p {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
+	font-size: 14px;
 }
 
 img {
@@ -83,106 +84,34 @@ button {
 	cursor: pointer;
 }
 
-/* .container {
-	width: 95%;
+/* CLASSES GERAIS */
+.container {
+	width: 90%;
+	max-width: 1640px;
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-} */
+}
 
-span.icon-menu {
-	display: block;
-	width: 2em;
-	height: 2em;
-	cursor: pointer;
-	border-radius: 0px;
-	position: fixed;
-	top: 10px;
-	right: 35px;
-	z-index: 800;
-	-webkit-transition: all .3s ease, -webkit-transform .2s ease;
-	transition: all .3s ease, transform .2s ease;
-	background: -webkit-linear-gradient(
-			top,
-			transparent 0%,
-			transparent 20%,
-			var(--primary-color-3) 20%,
-			var(--primary-color-3) 23%,
-			transparent 23%,
-			transparent 48%,
-			var(--primary-color-3) 48%,
-			var(--primary-color-3) 50%,
-			transparent 47%,
-			transparent 76%,
-			var(--primary-color-3) 76%,
-			var(--primary-color-3) 78%,
-			transparent 78%
-		),
-		-webkit-linear-gradient(transparent, transparent);
-	background: linear-gradient(
-			to bottom,
-			transparent 0%,
-			transparent 20%,
-			var(--primary-color-3) 20%,
-			var(--primary-color-3) 23%,
-			transparent 23%,
-			transparent 48%,
-			var(--primary-color-3) 48%,
-			var(--primary-color-3) 50%,
-			transparent 47%,
-			transparent 76%,
-			var(--primary-color-3) 76%,
-			var(--primary-color-3) 78%,
-			transparent 78%
-		),
-		linear-gradient(transparent, transparent);
+.tags {
+	color: var(--primary-color-2);
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	font-size: 18px;
+	font-family: 'La Belle Aurore', cursive;
 }
-span.icon-menu:active {
-	-webkit-transform: scale(0.9);
-	-ms-transform: scale(0.9);
-	transform: scale(0.9);
+
+.top-tags {
+	bottom: auto;
+	top: 100px;
 }
-span.clicked {
-	background: -webkit-linear-gradient(
-			135deg,
-			transparent 0%,
-			transparent 48%,
-			var(--primary-color-3) 49%,
-			var(--primary-color-3) 51%,
-			transparent 51%,
-			transparent 100%
-		),
-		-webkit-linear-gradient(45deg, transparent 0%, transparent 48%, var(--primary-color-3) 49%, var(--primary-color-3)
-					51%, transparent 51%, transparent 100%);
-	background: linear-gradient(
-			-45deg,
-			transparent 0%,
-			transparent 48%,
-			var(--primary-color-3) 49%,
-			var(--primary-color-3) 51%,
-			transparent 51%,
-			transparent 100%
-		),
-		linear-gradient(
-			45deg,
-			transparent 0%,
-			transparent 48%,
-			var(--primary-color-3) 49%,
-			var(--primary-color-3) 51%,
-			transparent 51%,
-			transparent 100%
-		);
-	-webkit-transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-	transform: rotate(180deg);
+
+.bottom-tags {
+	bottom: 20px;
 }
-span.clicked:active,
-span.clicked:hover {
-	-webkit-transform: scale(0.9) rotate(180deg);
-	-ms-transform: scale(0.9) rotate(180deg);
-	transform: scale(0.9) rotate(180deg);
-}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
 	width: 7px !important;
@@ -200,29 +129,268 @@ span.clicked:hover {
 /* MEDIA QUERIES */
 
 /*============================================================
-	For Small Desktop
+	Mobile (Landscape) Design for a width of 320px
 ==============================================================*/
 
-@media (min-width: 992px) and (max-width: 1366px) {
-}
+@media only screen and (min-width: 320px) {
+	/* TOPBAR MENU */
+	.topbar {
+		background: var(--primary-color-0);
+		padding: 5px 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 500;
+	}
 
-/*============================================================
-	Tablet (Portrait) Design for a width of 991px
-==============================================================*/
+	.topbar > .container {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-@media (min-width: 767px) and (max-width: 991px) {
+	.logo {
+		display: block;
+		font-family: 'La Belle Aurore', cursive;
+		font-size: 24px;
+		padding-top: 3px;
+	}
+
+	.logo::before,
+	.logo::after {
+		color: var(--theme-color);
+	}
+
+	.logo::before {
+		content: '<';
+	}
+
+	.logo::after {
+		content: '/>';
+	}
+
+	span.icon-menu {
+		display: block;
+		width: 2em;
+		height: 2em;
+		cursor: pointer;
+		border-radius: 0px;
+		-webkit-transition: all .3s ease, -webkit-transform .2s ease;
+		transition: all .3s ease, transform .2s ease;
+		background: -webkit-linear-gradient(
+				top,
+				transparent 0%,
+				transparent 20%,
+				var(--primary-color-3) 20%,
+				var(--primary-color-3) 23%,
+				transparent 23%,
+				transparent 48%,
+				var(--primary-color-3) 48%,
+				var(--primary-color-3) 50%,
+				transparent 47%,
+				transparent 76%,
+				var(--primary-color-3) 76%,
+				var(--primary-color-3) 78%,
+				transparent 78%
+			),
+			-webkit-linear-gradient(transparent, transparent);
+		background: linear-gradient(
+				to bottom,
+				transparent 0%,
+				transparent 20%,
+				var(--primary-color-3) 20%,
+				var(--primary-color-3) 23%,
+				transparent 23%,
+				transparent 48%,
+				var(--primary-color-3) 48%,
+				var(--primary-color-3) 50%,
+				transparent 47%,
+				transparent 76%,
+				var(--primary-color-3) 76%,
+				var(--primary-color-3) 78%,
+				transparent 78%
+			),
+			linear-gradient(transparent, transparent);
+	}
+	span.icon-menu:active {
+		-webkit-transform: scale(0.9);
+		-ms-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	span.clicked {
+		background: -webkit-linear-gradient(
+				135deg,
+				transparent 0%,
+				transparent 48%,
+				var(--primary-color-3) 49%,
+				var(--primary-color-3) 51%,
+				transparent 51%,
+				transparent 100%
+			),
+			-webkit-linear-gradient(45deg, transparent 0%, transparent 48%, var(--primary-color-3) 49%, var(--primary-color-3)
+						51%, transparent 51%, transparent 100%);
+		background: linear-gradient(
+				-45deg,
+				transparent 0%,
+				transparent 48%,
+				var(--primary-color-3) 49%,
+				var(--primary-color-3) 51%,
+				transparent 51%,
+				transparent 100%
+			),
+			linear-gradient(
+				45deg,
+				transparent 0%,
+				transparent 48%,
+				var(--primary-color-3) 49%,
+				var(--primary-color-3) 51%,
+				transparent 51%,
+				transparent 100%
+			);
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	span.clicked:active,
+	span.clicked:hover {
+		-webkit-transform: scale(0.9) rotate(180deg);
+		-ms-transform: scale(0.9) rotate(180deg);
+		transform: scale(0.9) rotate(180deg);
+	}
+
+	/* HOME */
+	.home {
+		height: 100vh;
+		position: relative;
+	}
+
+	.wrapper-display {
+		position: relative;
+		max-width: 1640px;
+		height: 100vh;
+		margin: 0 auto;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	.wrapper-display .robot {
+		width: 200px;
+	}
+
+	.wrapper-title {
+		flex-basis: 50%;
+	}
+
+	.wrapper-title h1 {
+		display: block;
+		font-size: 32px;
+		line-height: 32px;
+		padding: 10px 0;
+		position: relative;
+	}
+
+	.wrapper-title h1::before,
+	.wrapper-title h1::after {
+		font-family: 'La Belle Aurore', cursive;
+		font-size: 18px;
+		color: var(--primary-color-2);
+		position: absolute;
+	}
+
+	.wrapper-title h1::before {
+		content: '<h1>';
+		top: -40px;
+	}
+
+	.wrapper-title h1::after {
+		content: '</h1>';
+		bottom: 0;
+		right: 0;
+	}
+	.wrapper-title p {
+		color: var(--primary-color-2);
+		font-size: 12px;
+	}
+
+	.scroll {
+		width: 10px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto;
+	}
 }
 
 /*============================================================
 	Mobile (Landscape) Design for a width of 766px
 ==============================================================*/
 
-@media only screen and (min-width: 480px) and (max-width: 766px) {
+@media only screen and (min-width: 766px) {
+	/* HOME */
+	.wrapper-display {
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.wrapper-title {
+		flex-basis: auto;
+	}
+
+	.wrapper-display .robot {
+		width: 250px;
+	}
+
+	.wrapper-title h1 {
+		font-size: 36px;
+		line-height: 36px;
+	}
+
+	.wrapper-title h1::after {
+		bottom: 0;
+	}
+
+	.wrapper-title p {
+		font-size: 14px;
+	}
 }
 
 /*============================================================
-	Mobile (Landscape) Design for a width of 479px
+	Tablet (Portrait) Design for a width of 991px
 ==============================================================*/
 
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media (min-width: 991px) {
+	/* HOME */
+	.wrapper-display .robot {
+		width: 300px;
+	}
+
+	.wrapper-title h1 {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	.wrapper-title h1::after {
+		bottom: -10px;
+	}
+}
+
+/*============================================================
+	For Small Desktop
+==============================================================*/
+
+@media (min-width: 1366px) {
 }
