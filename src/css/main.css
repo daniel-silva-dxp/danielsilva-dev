@@ -6,7 +6,46 @@
 }
 
 /* ANIMAÇÃO */
+@keyframes rubberBand {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
 
+	30% {
+		-webkit-transform: scale3d(1.25, 0.75, 1);
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		-webkit-transform: scale3d(0.75, 1.25, 1);
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		-webkit-transform: scale3d(1.15, 0.85, 1);
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		-webkit-transform: scale3d(0.95, 1.05, 1);
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		-webkit-transform: scale3d(1.05, 0.95, 1);
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+.rubberBand {
+	-webkit-animation-name: rubberBand;
+	animation-name: rubberBand;
+}
 /* VARIÁVEIS */
 :root {
 	--theme-color: #28f5be;
@@ -128,10 +167,6 @@ button {
 	justify-content: flex-start;
 	align-items: flex-start;
 }
-.title h1 {
-	font-size: 14px;
-	font-family: MyFont;
-}
 .title h1 > span {
 	display: block;
 	font-size: 70px;
@@ -152,8 +187,7 @@ button {
 }
 
 /* FORMATAÇÃO GERAL */
-.home,
-.about {
+.home {
 	height: 100vh;
 	position: relative;
 }
@@ -179,6 +213,27 @@ button {
 ==============================================================*/
 
 @media only screen and (min-width: 320px) {
+	.title h1 {
+		font-size: 14px;
+		font-family: MyFont;
+	}
+	.title h1::before,
+	.title h1::after {
+		text-transform: none;
+		font-family: 'La Belle Aurore', cursive;
+		font-size: 18px;
+		color: var(--primary-color-2);
+		position: absolute;
+	}
+	.title h1::before {
+		content: '<h1>';
+		top: -40px;
+	}
+	.title h1::after {
+		content: '</h1>';
+		bottom: 0;
+		left: 140px;
+	}
 	/* TOPBAR MENU */
 	.topbar {
 		background: var(--primary-color-0);
@@ -287,7 +342,7 @@ button {
 	}
 
 	/* HOME */
-	.wrapper-display {
+	.wrapper-home {
 		position: relative;
 		max-width: 1640px;
 		height: 100vh;
@@ -304,7 +359,7 @@ button {
 		align-items: center;
 		justify-content: space-evenly;
 	}
-	.wrapper-display .robot {
+	.wrapper-home .robot {
 		margin-top: 80px;
 		width: 200px;
 	}
@@ -346,17 +401,6 @@ button {
 		bottom: 0;
 		margin: 0 auto;
 	}
-
-	/* QUEM SOU */
-	.text p {
-		font-size: 12px;
-		line-height: 16px;
-		margin-bottom: 20px;
-	}
-	.markup {
-		font-size: 40px;
-		line-height: 40px;
-	}
 }
 
 /*============================================================
@@ -365,14 +409,14 @@ button {
 
 @media only screen and (min-width: 766px) {
 	/* HOME */
-	.wrapper-display {
+	.wrapper-home {
 		-ms-flex-direction: row;
 		flex-direction: row;
 	}
 	.wrapper-title {
 		flex-basis: auto;
 	}
-	.wrapper-display .robot {
+	.wrapper-home .robot {
 		margin-top: 0;
 		width: 250px;
 	}
