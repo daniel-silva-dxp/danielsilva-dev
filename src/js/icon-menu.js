@@ -1,3 +1,5 @@
-document.querySelector('.icon-menu').addEventListener('click', function() {
+const menuIcon = document.querySelector('.icon-menu');
+
+menuIcon.addEventListener('click', function() {
 	this.classList.toggle('clicked');
 });
