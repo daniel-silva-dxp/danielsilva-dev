@@ -214,13 +214,15 @@ button {
 	color: var(--primary-color-0);
 	display: table;
 	margin-top: 40px;
-	font-size: 64px;
+	font-size: 40px;
 	font-weight: 400;
-	line-height: 55px;
+	line-height: 40px;
 	padding-right: 20px;
 	margin-bottom: 20px;
 }
-
+.text-green {
+	color: var(--theme-color);
+}
 /* FORMATAÇÃO GERAL */
 .home {
 	height: 100vh;
@@ -389,7 +391,7 @@ span.clicked:hover {
 	width: 350px;
 }
 .scroll {
-	width: 10px;
+	width: 8px;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -397,6 +399,76 @@ span.clicked:hover {
 	bottom: 0;
 }
 
+/* QUEM SOU */
+.about {
+	position: relative;
+	height: auto;
+	padding-bottom: 20px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.wrap-about {
+	display: flex;
+	flex-flow: column;
+}
+.wrap-text {
+	height: 360px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.wrap-text p {
+	font-size: 12px;
+	line-height: 16px;
+}
+.wrap-text .social-links {
+	width: 200px;
+	height: 50px;
+}
+.social-links a {
+	font-weight: 100;
+	display: inline-block;
+	padding: 14px 12px;
+	transition: all .2s;
+}
+.social-links a:first-child {
+	padding-left: 0;
+	margin-left: -6px;
+}
+.social-links a:hover {
+	color: var(--theme-color);
+}
+.photo {
+	position: relative;
+	align-self: center;
+	width: 100%;
+	max-width: 640px;
+	max-height: 400px;
+}
+.thumb {
+	background: var(--theme-color);
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	left: 20px;
+	opacity: 0;
+	transition: all 1s;
+}
+.thumb h4 {
+	color: var(--primary-color-0);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	font-size: 40px;
+}
+.thumb:hover {
+	opacity: .7;
+}
 /* SCROLLBAR */
 ::-webkit-scrollbar {
 	width: 7px !important;
@@ -436,6 +508,15 @@ span.clicked:hover {
 		font-size: 38px;
 		line-height: 38px;
 	}
+	/* QUEM SOU */
+	.wrap-text .markup {
+		font-size: 60px;
+		line-height: 55px;
+	}
+	.wrap-text p {
+		font-size: 14px;
+		line-height: 19px;
+	}
 }
 
 /*============================================================
@@ -473,5 +554,47 @@ span.clicked:hover {
 	}
 	.logo-display .logo {
 		width: 400px;
+	}
+	/* QUEM SOU */
+	.wrap-about {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		align-content: center;
+		justify-content: space-between;
+	}
+	.wrap-text {
+		padding-right: 20px;
+		flex-basis: 690px;
+		height: 400px;
+	}
+	.photo {
+		position: relative;
+		align-self: center;
+		flex-basis: 690px;
+		max-width: 690px;
+	}
+	.thumb {
+		background: var(--theme-color);
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		bottom: 20px;
+		left: 20px;
+		opacity: 0;
+		transition: all 1s;
+	}
+	.thumb h4 {
+		color: var(--primary-color-0);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		text-transform: uppercase;
+		font-size: 40px;
+	}
+	.thumb:hover {
+		opacity: .7;
 	}
 }
