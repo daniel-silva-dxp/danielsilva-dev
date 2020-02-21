@@ -174,6 +174,7 @@ button {
 	position: relative;
 	display: block;
 	margin-top: 140px;
+	margin-bottom: 20px;
 	text-transform: uppercase;
 	display: flex;
 	flex-direction: column;
@@ -469,6 +470,54 @@ span.clicked:hover {
 .thumb:hover {
 	opacity: .7;
 }
+
+/* MEU DNA */
+.dna {
+	position: relative;
+	height: auto;
+	padding-bottom: 20px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+.wrap-items {
+	height: 113px;
+}
+.wrap-items span {
+	font-family: 'Roboto Mono';
+	display: inline-block;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 300;
+	margin-right: 20px;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.wrap-items p {
+	position: relative;
+}
+.wrap-items p::before {
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: var(--theme-color);
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+	-webkit-transform: scale(0.1, 1);
+	-ms-transform: scale(0.1, 1);
+	transform: scale(0.1, 1);
+	transform-origin: center left;
+}
+.wrap-items p:hover::before {
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
 	width: 7px !important;
@@ -563,10 +612,17 @@ span.clicked:hover {
 		align-content: center;
 		justify-content: space-between;
 	}
-	.wrap-text {
-		padding-right: 20px;
+	.wrap-text:first-child,
+	.wrap-text:last-child {
 		flex-basis: 690px;
 		height: 400px;
+	}
+	.wrap-text:first-child {
+		padding-right: 20px;
+	}
+	.wrap-text:last-child {
+		margin-top: 15px;
+		padding-left: 20px;
 	}
 	.photo {
 		position: relative;
