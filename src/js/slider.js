@@ -11,6 +11,7 @@ const nxt = document.querySelector('.item-nxt');
 const currentSlide = document.querySelector('.current-slide');
 const totalSlide = document.querySelector('.total-slide');
 let currentCounter = 0;
+const navItems = document.querySelectorAll('.item-navigator a');
 
 // CAPITURANDO LARGURA
 sliderContainer.style.width = `${containerWidth}px`;
@@ -71,15 +72,46 @@ const counterRemove = () => {
 		currentSlide.innerHTML = counterFormatter(currentCounter);
 	}
 };
+
+const setActiveNav = () => {
+	for (let i = 0; i < navItems.length; i++) {
+		let myNavNumber = parseInt(navItems[i].getAttribute('data-nav'));
+		if (myNavNumber === currentCounter) {
+			navItems[i].classList.add('item-active');
+			anime({
+				targets: '.item-active',
+				width: 80
+			});
+		}
+	}
+};
+
+const changeActive = () => {
+	for (let i = 0; i < navItems.length; i++) {
+		anime({
+			targets: '.item-active',
+			width: 40
+		});
+		navItems[i].classList.remove('item-active');
+	}
+	setActiveNav();
+};
+
 //AÇÕES
 totalSlide.innerHTML = counterFormatter(sliderTotalItem);
+anime({
+	targets: '.item-active',
+	width: 80
+});
 
 nxt.addEventListener('click', () => {
 	nxtSlideAnim();
 	counterAdd();
+	changeActive();
 });
 
 prv.addEventListener('click', () => {
 	prvSlideAnim();
 	counterRemove();
+	changeActive();
 });
