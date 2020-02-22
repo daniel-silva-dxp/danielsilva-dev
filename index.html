@@ -10,6 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--CSS STYLE-->
         <link rel="stylesheet" href="./src/css/main.css">
+        <!-- CSS GRID -->
+        <link rel="stylesheet" href="./src/css/grid.css">
         <!-- FONTELLO -->
         <link rel="stylesheet" href="./src/css/fontello/css/fontello.css">
         
@@ -178,31 +180,44 @@
                             </span>
                         </h1>
                     </div>
-                    <nav class="wrap-cases">
-                        <div class="cases-navigator">
-                            <div class="navigator-counter">
-                                <span class="text-green">00</span>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="cases-navigator">
+                                <div class="navigator-counter">
+                                    <span class="text-green">00</span>
+                                </div>
+                                <nav class="item-navigator">
+                                    <a href="#" class="item-active"></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                </nav>
+                                <div class="nxt-prv-items">
+                                    <div class="item-prv">
+                                        <ion-icon name="chevron-back-outline"></ion-icon>
+                                    </div>
+                                    <div class="items-counter">
+                                        <span>00</span>
+                                        /
+                                        <span>04</span>
+                                    </div>
+                                    <div class="item-nxt">
+                                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </div>                                                                
+                                </div>                            
                             </div>
-                            <nav class="item-navigator">
-                                <a href="#" class="item-active"></a>
-                                <a href="#"></a>
-                                <a href="#"></a>
-                                <a href="#"></a>
-                                <a href="#"></a>
-                            </nav>
-                            <div class="nxt-prv-items">
-                                <div class="item-prv">
-                                    <ion-icon name="chevron-back-outline"></ion-icon>
-                                </div>
-                                <div class="items-counter">
-                                    <span>00</span>
-                                    /
-                                    <span>04</span>
-                                </div>
-                                <div class="item-nxt">
-                                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                                </div>                                                                
-                            </div>                            
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="slider-container">
+                                <ul class="slider-list">
+                                    <li class="slider-item" style="background: tomato;"></li>
+                                    <li class="slider-item" style="background: turquoise;"></li>
+                                    <li class="slider-item" style="background: violet;"></li>
+                                    <li class="slider-item" style="background: wheat;"></li>
+                                    <li class="slider-item" style="background: yellowgreen;"></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>                
@@ -211,6 +226,7 @@
         </main>
 
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="./src/js/anime.min.js"></script>
         <script src="./src/js/main.js"></script>
         <script src="./src/js/icon-menu.js"></script>
     </body>
