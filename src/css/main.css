@@ -440,8 +440,8 @@ span.clicked:hover {
 .text-display h1 {
 	position: relative;
 	padding-top: 20px;
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 38px;
+	line-height: 38px;
 }
 .text-display h1::before,
 .text-display h1::after {
@@ -499,7 +499,7 @@ span.clicked:hover {
 	justify-content: flex-start;
 }
 .wrap-text p {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 16px;
 }
 .wrap-text .social-links {
