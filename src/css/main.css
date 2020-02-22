@@ -82,7 +82,7 @@ body {
 }
 body {
 	font-family: 'Roboto', sans-serif;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 ol,
 ul {
@@ -456,6 +456,10 @@ span.clicked:hover {
 	max-width: 640px;
 	max-height: 400px;
 }
+.photo:first-child {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
 .thumb {
 	background: var(--theme-color);
 	position: absolute;
@@ -528,19 +532,10 @@ span.clicked:hover {
 }
 
 /* CASES */
-.wrap-cases {
-	height: 510px;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	position: relative;
-}
 .cases-navigator {
-	position: absolute;
 	width: 145px;
-	height: 400px;
+	margin-top: 25vh;
 	display: table;
-	left: 0;
 }
 .cases-navigator .navigator-counter {
 	width: 100%;
@@ -614,7 +609,22 @@ ion-icon {
 ion-icon:hover {
 	color: var(--primary-color-3);
 }
-
+.slider-container {
+	display: block;
+	height: 100vh;
+	background-color: var(--theme-color);
+	overflow: hidden;
+}
+.slider-list {
+	height: 700px;
+	display: block;
+	background: var(--primary-color-2);
+}
+.slider-list .slider-item {
+	display: block;
+	float: left;
+	height: 500px;
+}
 /* SCROLLBAR */
 ::-webkit-scrollbar {
 	width: 7px !important;
