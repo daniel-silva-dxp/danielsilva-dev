@@ -181,7 +181,7 @@ button {
 .title {
 	position: relative;
 	display: block;
-	margin-top: 120px;
+	margin-top: 40px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
 	display: flex;
@@ -222,7 +222,6 @@ button {
 	background: var(--theme-color);
 	color: var(--primary-color-0);
 	display: table;
-	margin-top: 40px;
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 40px;
@@ -392,10 +391,8 @@ span.clicked:hover {
 }
 .logo-display {
 	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	align-content: center;
-	justify-content: space-around;
+	flex-flow: column wrap;
+	justify-content: flex-start;
 }
 .logo-display .logo {
 	width: 350px;
@@ -413,7 +410,6 @@ span.clicked:hover {
 .about {
 	position: relative;
 	height: auto;
-	padding-bottom: 20px;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
@@ -426,7 +422,7 @@ span.clicked:hover {
 	height: 360px;
 	display: flex;
 	flex-flow: column wrap;
-	justify-content: center;
+	justify-content: flex-start;
 }
 .wrap-text p {
 	font-size: 12px;
@@ -455,9 +451,6 @@ span.clicked:hover {
 	width: 100%;
 	max-width: 640px;
 	max-height: 400px;
-}
-.photo:first-child {
-	margin-top: 40px;
 	margin-bottom: 40px;
 }
 .thumb {
@@ -532,9 +525,12 @@ span.clicked:hover {
 }
 
 /* CASES */
+.cases {
+	padding: 0 0 20px 0;
+}
 .cases-navigator {
 	width: 145px;
-	margin-top: 25vh;
+	margin-top: 5vh;
 	display: table;
 }
 .cases-navigator .navigator-counter {
@@ -572,10 +568,8 @@ span.clicked:hover {
 	background: #fff;
 	display: block;
 	margin-bottom: 60px;
-	transition: all .2s ease-out;
 }
 .item-navigator a.item-active {
-	width: 80px;
 	background: var(--theme-color);
 }
 .cases-navigator .nxt-prv-items {
@@ -611,12 +605,11 @@ ion-icon:hover {
 }
 .slider-container {
 	display: block;
-	height: 100vh;
-	background-color: var(--theme-color);
+	height: auto;
 	overflow: hidden;
 }
 .slider-list {
-	height: 700px;
+	height: 70vh;
 	display: block;
 	background: var(--primary-color-2);
 }
