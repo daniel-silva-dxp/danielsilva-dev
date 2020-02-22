@@ -160,7 +160,7 @@ button {
 }
 .logo-nav {
 	display: block;
-	width: 120px;
+	width: 150px;
 }
 .tags {
 	color: var(--primary-color-2);
@@ -548,14 +548,14 @@ span.clicked:hover {
 	display: block;
 	width: 30px;
 	height: 100%;
-	background-color: var(--primary-color-0);
+	background: var(--primary-color-0);
 	position: absolute;
 	top: 0;
 	left: -30px;
 }
 .navigator-counter span {
 	font-family: 'Roboto Mono';
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 120px;
 	line-height: 85px;
 	letter-spacing: -0.1em;
@@ -617,12 +617,11 @@ ion-icon:hover {
 .slider-list {
 	height: 70vh;
 	display: block;
-	background: var(--primary-color-2);
 }
 .slider-list .slider-item {
 	display: block;
 	float: left;
-	height: 500px;
+	height: 100%;
 }
 /* SCROLLBAR */
 ::-webkit-scrollbar {

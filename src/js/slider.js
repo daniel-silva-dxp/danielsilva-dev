@@ -12,6 +12,7 @@ const currentSlide = document.querySelector('.current-slide');
 const totalSlide = document.querySelector('.total-slide');
 let currentCounter = 0;
 const navItems = document.querySelectorAll('.item-navigator a');
+const navCounter = document.querySelector('.navigator-counter span');
 
 // CAPITURANDO LARGURA
 sliderContainer.style.width = `${containerWidth}px`;
@@ -63,6 +64,7 @@ const counterAdd = () => {
 	if (currentCounter >= 0 && currentCounter < sliderTotalItem) {
 		currentCounter++;
 		currentSlide.innerHTML = counterFormatter(currentCounter);
+		navCounter.innerHTML = counterFormatter(currentCounter);
 	}
 };
 
@@ -70,6 +72,7 @@ const counterRemove = () => {
 	if (currentCounter > 0 && currentCounter <= sliderTotalItem) {
 		currentCounter--;
 		currentSlide.innerHTML = counterFormatter(currentCounter);
+		navCounter.innerHTML = counterFormatter(currentCounter);
 	}
 };
 
