@@ -602,8 +602,7 @@ span.clicked:hover {
 .cases {
 	padding: 0 0 20px 0;
 }
-.cases .container .row,
-.slider-list .slider-item .row {
+.cases .container > .row {
 	display: flex;
 	align-items: center;
 }
@@ -694,12 +693,18 @@ ion-icon:hover {
 	display: block;
 }
 .slider-list .slider-item {
-	display: block;
 	float: left;
 	height: 100%;
+	display: block;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+.case-item-info {
+	margin-top: 90px;
 }
 .case-item-info h1 {
-	font-size: 60px;
+	font-size: 50px;
 	margin-bottom: 20px;
 }
 .case-item-info h5 {
@@ -709,6 +714,19 @@ ion-icon:hover {
 	font-weight: 800;
 	color: var(--primary-color-2);
 	margin-bottom: 20px;
+}
+.case-item-thumb {
+	width: 100%;
+	background: var(--primary-color-1);
+	display: table;
+	margin-left: 1px;
+	padding: 90px 0;
+}
+.case-item-thumb img {
+	max-width: 100%;
+	height: auto;
+	position: relative;
+	margin-left: -50px;
 }
 
 /* SCROLLBAR */
