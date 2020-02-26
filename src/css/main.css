@@ -108,10 +108,6 @@ button {
 		max-width: 1640px;
 	}
 }
-.logo-nav {
-	display: block;
-	width: 150px;
-}
 .tags {
 	color: var(--primary-color-2);
 	position: fixed;
@@ -272,12 +268,11 @@ button {
 	z-index: 500;
 }
 .topbar > .container {
+	padding: 5px 15px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: space-between;
+	flex-flow: row-reverse wrap;
 }
 span.icon-menu {
 	display: block;
@@ -378,19 +373,17 @@ span.clicked:hover {
 	height: 520px;
 	display: flex;
 	flex-flow: row wrap;
-}
-.text-display,
-.logo-display {
-	width: 100%;
+	align-items: center;
+	align-content: center;
 }
 .text-display {
-	padding-top: 40px;
+	position: relative;
+	width: 100%;
+	max-width: 650px;
 }
 .text-display h1 {
 	position: relative;
-	padding-top: 20px;
-	font-size: 38px;
-	line-height: 38px;
+	margin-bottom: 20px;
 }
 .text-display h1::before,
 .text-display h1::after {
@@ -401,24 +394,27 @@ span.clicked:hover {
 }
 .text-display h1::before {
 	content: '<h1>';
-	top: -5px;
+	top: -5%;
 }
 .text-display h1::after {
 	content: '</h1>';
-	bottom: -10px;
+	bottom: -8%;
 	right: 0;
 }
+.text-display h4,
 .text-display p {
+	font-weight: 200;
+	text-align: right;
+}
+.text-display h4 {
+	color: var(--theme-color);
+	font-family: 'Roboto Mono', monospace;
 	font-size: 14px;
-	color: var(--primary-color-2);
 }
-.logo-display {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-start;
-}
-.logo-display .logo {
-	width: 350px;
+.text-display p {
+	text-align: right;
+	font-size: 14px;
+	color: var(--primary-color-3);
 }
 .scroll {
 	width: 8px;
@@ -572,21 +568,17 @@ span.clicked:hover {
 @media only screen and (min-width: 768px) {
 	/* HOME */
 	.display-align {
-		height: 360px;
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
-	.text-display,
-	.logo-display {
-		flex-basis: 345px;
-	}
-	.text-display h1 {
-		font-size: 38px;
-		line-height: 38px;
+	.text-display h1::after {
+		content: '</h1>';
+		bottom: -7px;
+		right: 17%;
 	}
 	/* QUEM SOU */
 	.wrap-text .markup {
@@ -615,26 +607,6 @@ span.clicked:hover {
 ==============================================================*/
 
 @media (min-width: 1366px) {
-	/* HOME */
-	.text-display,
-	.logo-display {
-		flex-basis: 540px;
-	}
-	.text-display h1 {
-		font-size: 60px;
-		line-height: 60px;
-	}
-	.text-display h1::before {
-		top: -15px;
-	}
-	.text-display h1::after {
-		content: '</h1>';
-		bottom: -10px;
-		right: 0;
-	}
-	.logo-display .logo {
-		width: 400px;
-	}
 	/* QUEM SOU */
 	.wrap-about {
 		display: flex;
