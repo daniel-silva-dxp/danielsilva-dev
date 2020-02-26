@@ -383,10 +383,10 @@ span.clicked:hover {
 }
 .text-display h1 {
 	position: relative;
-	margin-bottom: 20px;
 }
 .text-display h1::before,
 .text-display h1::after {
+	text-transform: lowercase;
 	position: absolute;
 	font-size: 18px;
 	color: var(--primary-color-2);
@@ -394,12 +394,12 @@ span.clicked:hover {
 }
 .text-display h1::before {
 	content: '<h1>';
-	top: -5%;
+	top: 5%;
 }
 .text-display h1::after {
 	content: '</h1>';
-	bottom: -5%;
-	right: 0;
+	bottom: 0;
+	left: 0;
 }
 .text-display h4,
 .text-display p {
@@ -422,7 +422,7 @@ span.clicked:hover {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	bottom: 20px;
+	bottom: 40px;
 }
 
 /* QUEM SOU */
@@ -575,13 +575,12 @@ span.clicked:hover {
 		-ms-flex-pack: center;
 		justify-content: center;
 	}
-	.text-display h1::after {
-		content: '</h1>';
-		bottom: -7px;
-		right: 17%;
+	.text-display h1 {
+		font-size: 70px;
 	}
-	.scroll {
-		bottom: 20px;
+	.text-display h1::after {
+		bottom: 5px;
+		right: 25%;
 	}
 	/* QUEM SOU */
 	.wrap-text .markup {
