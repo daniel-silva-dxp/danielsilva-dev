@@ -576,9 +576,10 @@ span.clicked:hover {
 		justify-content: center;
 	}
 	.text-display h1::after {
-		content: '</h1>';
-		bottom: -7px;
 		right: 17%;
+	}
+	.scroll {
+		bottom: 0;
 	}
 	/* QUEM SOU */
 	.wrap-text .markup {
