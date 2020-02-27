@@ -27,8 +27,7 @@
 }
 html,
 body {
-	background: var(--primary-color-0);
-	color: var(--primary-color-3);
+	color: var(--primary-color-0);
 }
 body {
 	font-family: 'Roboto', sans-serif;
@@ -259,7 +258,6 @@ button {
 
 /* TOPBAR MENU */
 .topbar {
-	background: var(--primary-color-0);
 	padding: 5px 0;
 	position: fixed;
 	top: 0;
@@ -286,16 +284,16 @@ span.icon-menu {
 			top,
 			transparent 0%,
 			transparent 20%,
-			var(--primary-color-3) 20%,
-			var(--primary-color-3) 23%,
+			var(--primary-color-0) 20%,
+			var(--primary-color-0) 23%,
 			transparent 23%,
 			transparent 48%,
-			var(--primary-color-3) 48%,
-			var(--primary-color-3) 50%,
+			var(--primary-color-0) 48%,
+			var(--primary-color-0) 50%,
 			transparent 47%,
 			transparent 76%,
-			var(--primary-color-3) 76%,
-			var(--primary-color-3) 78%,
+			var(--primary-color-0) 76%,
+			var(--primary-color-0) 78%,
 			transparent 78%
 		),
 		-webkit-linear-gradient(transparent, transparent);
@@ -303,16 +301,16 @@ span.icon-menu {
 			to bottom,
 			transparent 0%,
 			transparent 20%,
-			var(--primary-color-3) 20%,
-			var(--primary-color-3) 23%,
+			var(--primary-color-0) 20%,
+			var(--primary-color-0) 23%,
 			transparent 23%,
 			transparent 48%,
-			var(--primary-color-3) 48%,
-			var(--primary-color-3) 50%,
+			var(--primary-color-0) 48%,
+			var(--primary-color-0) 50%,
 			transparent 47%,
 			transparent 76%,
-			var(--primary-color-3) 76%,
-			var(--primary-color-3) 78%,
+			var(--primary-color-0) 76%,
+			var(--primary-color-0) 78%,
 			transparent 78%
 		),
 		linear-gradient(transparent, transparent);
@@ -383,6 +381,7 @@ span.clicked:hover {
 }
 .text-display h1 {
 	position: relative;
+	margin-bottom: 20px;
 }
 .text-display h1::before,
 .text-display h1::after {
@@ -394,17 +393,12 @@ span.clicked:hover {
 }
 .text-display h1::before {
 	content: '<h1>';
-	top: 5%;
+	top: -10%;
 }
 .text-display h1::after {
 	content: '</h1>';
 	bottom: 0;
-	left: 0;
-}
-.text-display h4,
-.text-display p {
-	font-weight: 200;
-	text-align: right;
+	right: 0;
 }
 .text-display h4 {
 	color: var(--theme-color);
@@ -412,7 +406,8 @@ span.clicked:hover {
 	font-size: 14px;
 }
 .text-display p {
-	text-align: right;
+	font-weight: 200;
+	text-align: center;
 	font-size: 14px;
 	color: var(--primary-color-3);
 }
@@ -422,7 +417,7 @@ span.clicked:hover {
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	bottom: 40px;
+	bottom: 50px;
 }
 
 /* QUEM SOU */
@@ -550,10 +545,10 @@ span.clicked:hover {
 	width: 7px !important;
 }
 ::-webkit-scrollbar-track {
-	background: var(--dark-color) !important;
+	background: var(--primary-color-3) !important;
 }
 ::-webkit-scrollbar-thumb {
-	background: var(--medium-dark-color) !important;
+	background: var(--primary-color-0) !important;
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--theme-color) !important;
@@ -575,12 +570,8 @@ span.clicked:hover {
 		-ms-flex-pack: center;
 		justify-content: center;
 	}
-	.text-display h1 {
-		font-size: 70px;
-	}
 	.text-display h1::after {
-		bottom: 5px;
-		right: 25%;
+		right: 0;
 	}
 	/* QUEM SOU */
 	.wrap-text .markup {
@@ -601,6 +592,9 @@ span.clicked:hover {
 	/* HOME */
 	.display-align {
 		justify-content: space-evenly;
+	}
+	.scroll {
+		bottom: 0;
 	}
 }
 
