@@ -393,23 +393,17 @@ span.clicked:hover {
 }
 .text-display h1::before {
 	content: '<h1>';
-	top: -10%;
+	top: -30%;
 }
 .text-display h1::after {
 	content: '</h1>';
-	bottom: 0;
+	bottom: -30%;
 	right: 0;
 }
-.text-display h4 {
-	color: var(--theme-color);
-	font-family: 'Roboto Mono', monospace;
-	font-size: 14px;
-}
 .text-display p {
-	font-weight: 200;
 	text-align: center;
 	font-size: 14px;
-	color: var(--primary-color-3);
+	color: var(--primary-color-0);
 }
 .scroll {
 	width: 8px;
@@ -569,9 +563,6 @@ span.clicked:hover {
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
-	}
-	.text-display h1::after {
-		right: 0;
 	}
 	/* QUEM SOU */
 	.wrap-text .markup {
