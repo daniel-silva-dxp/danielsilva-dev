@@ -259,6 +259,7 @@ button {
 
 /* TOPBAR MENU */
 .topbar {
+	background: var(--primary-color-3);
 	padding: 5px 0;
 	position: fixed;
 	top: 0;
