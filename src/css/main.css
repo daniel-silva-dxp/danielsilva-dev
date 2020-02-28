@@ -31,7 +31,7 @@ body {
 }
 body {
 	font-family: 'Roboto', sans-serif;
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
 }
 ol,
 ul {
@@ -405,7 +405,8 @@ span.clicked:hover {
 	right: 0;
 }
 .text-display h4 {
-	font-weight: 600;
+	font-family: 'Roboto Mono';
+	font-weight: 400;
 	font-size: 18px;
 	line-height: 18px;
 }
