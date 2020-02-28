@@ -681,6 +681,7 @@ span.clicked:hover {
 	}
 	/* CASES */
 	.cases {
+		display: block;
 		height: auto;
 		padding-bottom: 20px;
 	}
