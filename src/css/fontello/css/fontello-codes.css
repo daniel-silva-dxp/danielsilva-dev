@@ -1,4 +1,8 @@
 
+.icon-home-outline:before { content: '\e800'; } /* '' */
+.icon-user-outline:before { content: '\e801'; } /* '' */
+.icon-briefcase:before { content: '\e802'; } /* '' */
+.icon-phone-outline:before { content: '\e803'; } /* '' */
 .icon-facebook:before { content: '\f300'; } /* '' */
 .icon-github:before { content: '\f308'; } /* '' */
 .icon-linkedin:before { content: '\f31a'; } /* '' */
