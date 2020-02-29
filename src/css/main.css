@@ -115,7 +115,7 @@ button {
 	left: 10px;
 	font-size: 18px;
 	font-family: 'La Belle Aurore', cursive;
-	z-index: 600;
+	z-index: 800;
 }
 .top-tags {
 	bottom: auto;
@@ -372,8 +372,8 @@ span.clicked:hover {
 	right: -61px;
 	width: 61px;
 	height: 100%;
-	background: var(--primary-color-3);
-	border-left: 1px solid var(--primary-color-2);
+	background: var(--primary-color-0);
+	color: var(--primary-color-3);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -399,6 +399,7 @@ span.clicked:hover {
 .content-nav nav ul li:hover,
 .content-nav nav ul li:focus {
 	border-left: 3px solid var(--theme-color);
+	background: var(--primary-color-1);
 }
 
 /* HOME */
@@ -600,7 +601,7 @@ span.clicked:hover {
 	background: var(--primary-color-3) !important;
 }
 ::-webkit-scrollbar-thumb {
-	background: var(--primary-color-3) !important;
+	background: var(--primary-color-0) !important;
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--theme-color) !important;
